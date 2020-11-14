@@ -1,0 +1,7 @@
+server:
+  port: 9080
+spring:
+  application:
+    name: feign-customer
+
+version: 1.2.2

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="eurekaserver9002" />
+        <module name="zuul" />
+        <module name="eurekaserver9000" />
+        <module name="customer" />
+        <module name="feign" />
+        <module name="ohcprovider" />
+        <module name="ribbon" />
+        <module name="provider1" />
+        <module name="configserver" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ouhuachaoprovider" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="configserver" options="-parameters" />
+      <module name="customer" options="-parameters" />
+      <module name="eurekaserver9000" options="-parameters" />
+      <module name="eurekaserver9002" options="-parameters" />
+      <module name="feign" options="-parameters" />
+      <module name="ohcprovider" options="-parameters" />
+      <module name="ouhuachaoprovider" options="-parameters" />
+      <module name="provider1" options="-parameters" />
+      <module name="ribbon" options="-parameters" />
+      <module name="springcloudtest" options="-parameters" />
+      <module name="zuul" options="-parameters" />
+    </option>
+  </component>
+</project>

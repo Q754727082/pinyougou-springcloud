@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: zuulServer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:9001/eureka
+  instance:
+    prefer-ip-address: true
+zuul:
+  ignored-services: "*"
+#  ignored-patterns: /api/1.0/**
+  prefix: /api/
+  routes:
+#    provider: /goods/*
+#    provider2: /user/**
+#    prvoider3: /orders/
+    provider:
+      path: /1.0/goods/**
+      serviceId: provider
+      #url: http://localhost:9091
+    provider2:
+      path: /user/**
+      url: http://localhost:9092
+    ohcprovider: /ohcprovider/**
+

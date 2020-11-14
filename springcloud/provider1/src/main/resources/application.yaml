@@ -1,0 +1,27 @@
+server:
+  port: 9091
+spring:
+  application:
+    name: provider
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://39.100.49.210:3306/test?serverTimeZone=GMT%2B8
+    username: sms_user
+    password: sms_user_admin
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+  type-aliases-package: com.provider.entity
+  configuration:
+    map-underscore-to-camel-case: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:9001/eureka
+  instance:
+    prefer-ip-address: true
+info:
+  app.name: provider
+  author: bruce liao
+
